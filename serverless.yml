@@ -2,7 +2,7 @@ service: my-service
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs20.x
   region: us-east-1
   environment:
     MY_ENV_VAR: "some_value"

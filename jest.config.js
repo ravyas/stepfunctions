@@ -1,5 +1,16 @@
 module.exports = {
     preset: 'ts-jest',
-    collectCoverage: true,
-    coverageDirectory: 'coverage',
+    testEnvironment: 'node',
+    moduleNameMapper: {
+      '^@/(.*)$': '<rootDir>/src/$1',
+    },
+    moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'node'],
+    testMatch: ['**/*.test.ts'],
+    transform: {
+      '^.+\\.tsx?$': 'ts-jest',
+      '^.+\\.jsx?$': 'babel-jest'
+    },
+    globalSetup: '<rootDir>/test/globalSetup.ts',
+    globalTeardown: '<rootDir>/test/globalTeardown.ts',
   };
+  
