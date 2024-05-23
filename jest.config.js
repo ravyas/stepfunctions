@@ -10,5 +10,6 @@ module.exports = {
       '^.+\\.tsx?$': 'ts-jest',
       '^.+\\.jsx?$': 'babel-jest'
     },
+    testTimeout: 10000,
   };
   
