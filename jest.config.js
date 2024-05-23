@@ -10,7 +10,5 @@ module.exports = {
       '^.+\\.tsx?$': 'ts-jest',
       '^.+\\.jsx?$': 'babel-jest'
     },
-    globalSetup: '<rootDir>/test/globalSetup.ts',
-    globalTeardown: '<rootDir>/test/globalTeardown.ts',
   };
   
