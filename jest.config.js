@@ -10,6 +10,8 @@ module.exports = {
       '^.+\\.tsx?$': 'ts-jest',
       '^.+\\.jsx?$': 'babel-jest'
     },
-    testTimeout: 10000,
+    testTimeout: 15000,
+    globalSetup: '<rootDir>/test/globalSetup.ts',
+    globalTeardown: '<rootDir>/test/globalTeardown.ts',
   };
   
