@@ -29,10 +29,7 @@ export const startServerlessOffline = async () => {
   console.log("Serverless Offline started");
 
   process.on("exit", () => {
-    if (serverlessOfflineProcess) {
-      serverlessOfflineProcess.kill("SIGINT");
-      console.log("Serverless Offline stopped");
-    }
+    killServerlessOffline();
   });
 
   // Wait a few seconds to ensure Serverless Offline is up and running
@@ -43,6 +40,6 @@ export const stopServerlessOffline = async () => {
   // Implement logic to stop the server if necessary
   if (serverlessOfflineProcess) {
     serverlessOfflineProcess.kill("SIGINT");
-    console.log("Serverless Offline stopped");
+    console.log("Serverless Offline stopped through global teardown");
   }
 };
